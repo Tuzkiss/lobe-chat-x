@@ -7,7 +7,7 @@ import { UserDefaultAgent } from '@/types/user/settings';
 export const DEFAUTT_AGENT_TTS_CONFIG: LobeAgentTTSConfig = {
   showAllLocaleVoice: false,
   sttLocale: 'auto',
-  ttsService: 'openai',
+  ttsService: 'edge',
   voice: {
     openai: 'alloy',
   },
@@ -30,8 +30,8 @@ export const DEFAULT_AGENT_CONFIG: LobeAgentConfig = {
     top_p: 1,
   },
   plugins: [],
-  provider: ModelProvider.OpenAI,
-  systemRole: '',
+  provider: ModelProvider.Azure,
+  systemRole: '你是一个资深技术专家，请逐步思考，然后按照指示回答',
   tts: DEFAUTT_AGENT_TTS_CONFIG,
 };
 
